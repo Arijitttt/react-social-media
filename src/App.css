@@ -1,6 +1,417 @@
-.App {
-  text-align: center;
+*{
+  margin: 0; 
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
 }
+
+.topbarContainer{
+  height: 50px;
+  width: 100%;
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.topbarLeft{
+  flex: 3;
+  
+}
+.topbarCenter{
+  flex: 5;
+  
+}
+.topbarRight{
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #ffffff;
+  
+}
+.topbarLink{
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.topbarIcons{
+  display: flex;
+}
+.topbarIconItem{
+  margin-right: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.topbarIconBadge{
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.topbarImg{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.logo{
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: crimson;
+  cursor: pointer;
+}
+.searchbar{
+  width: 100%;
+  background-color: #ffffff;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+.searchIcon{
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+.searchInput{
+  border: none;
+  width: 70%;
+}
+.searchInput:focus{
+  outline: none;
+}
+
+/*body part*/
+
+.homeContainer{
+  display: flex;
+  width: 100%;
+  
+}
+.sidebar{
+  
+  flex: 3;
+  height:calc(100vh - 50px) ;
+  overflow-y: scroll;
+position: sticky;
+top: 50px;
+}
+
+
+::-webkit-scrollbar{
+  width: 2px;
+}
+::-webkit-scrollbar-track{
+  background-color:black;
+}
+::-webkit-scrollbar-thumb{
+  background-color: gray;
+}
+.sidebarWrapper{
+  padding: 20px;
+  
+}
+.sidebarList{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebarListItem{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sidebarIcon{
+  margin-right: 15px;
+}
+.sidebarButton{
+  width: 150px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 400;
+}
+.sidebarHr{
+  margin: 20px 0;
+}
+.sidebarFriendList{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebarFriend{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.sidebarFriendImg{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.feed{
+  flex: 5.5;
+}
+.share{
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  -webkit-box-shadow:0px 16px -8px;
+  box-shadow: 0px 1px 16px -8px;
+  
+}   
+.shareWrapper{
+  padding: 10px;
+}
+.shareProfileImg{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.shareTop{
+  display: flex;
+  align-items: center;
+}
+.shareInput{
+  border: none;
+  width: 80%;
+}
+.shareInput:focus{
+  outline: none;
+}
+.shareHr{
+  margin: 20px;
+}
+.shareBottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shareOptions{
+  display: flex;
+  margin-left: 20px;
+}
+.shareOption{
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: ease-out 2s;
+}
+.shareOption:hover{
+  transition-timing-function: ease-in;
+  transition: 0.4s;
+  transform: translateY(50%);
+  background-color: #0c0d0f;
+  color: white;
+  border-radius: 5px;
+  object-fit: cover;
+  padding: 5px;
+
+  
+}
+.shareIcon{
+  font-size: 18px;
+  margin-right: 3px;
+}
+.shareOptionText{
+  font-size: 14px;
+  font-size: larger;
+}
+.shareButton{
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #282c34;
+  font-weight: 500;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  width: 56px;
+}
+.shareButton:hover{
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+  transform: translateY(50%);
+  background-color: #0c0d0f;
+  color: white;
+  border-radius: 5px;
+}
+
+.post{
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow:0px 16px -8px rgba(0,0,0,0.68);
+  box-shadow: 0px 1px 16px -8px rgba(0,0,0,0.68);
+  margin: 30px 0;
+}
+.postWrapper{
+  padding: 10px;
+}
+.postTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.postTopLeft{
+
+  display: flex;
+  align-items: center;
+}
+.postProfileImg{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.postUsername{
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 10px;
+}
+.postDate{
+  font-size: 12px;
+}
+.postCenter{
+  margin: 20px 0;
+}
+.postImg{
+  margin-top: 20px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+.postBottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.postBottomLeft{
+  display: flex;
+  align-items: center;
+}
+.likeIcon{
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.postlikeCounter{
+  font-size: 15px;
+}
+.postCommentText{
+  cursor: pointer;
+  border-bottom: 1px dashed gray;
+  font-size: 15px;
+}
+
+
+
+.feedWrapper{
+  padding: 20px;
+}
+.rightbar{
+  flex: 3.5;
+}
+.rightbarWrapper{
+  padding: 20px 20px 0 0;
+}
+.birthdayContainer{
+  display: flex;
+  align-items: center;
+}
+.birthdayImg{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.birthdayText{
+  font-weight: 300;
+  font-size: 15px;
+}
+.rightbarAd{
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+.rightbarTitle{
+  margin-bottom: 20px;
+}
+.rightbarFriendList{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 15px;
+}
+.rightbarProfileImgContainer{
+  margin-right: 10px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.rightbarProfileImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/*.rightbarOnline{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: limegreen;
+  position: absolute;
+  top: -2px;
+  right: 0;
+}*/
+.rightbarProfileImgContainer{
+  display: flex;
+  align-items: center;
+  
+}
+.rightbarOnline{
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  font-weight: 750;
+}
+.rightbarOnlineIcon{
+  display: flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: limegreen;
+  position: absolute;
+  right: 0;
+  border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+/*.App {
+  text-align: center;
+  
+
+}*/
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +446,160 @@
   to {
     transform: rotate(360deg);
   }
+ }
+
+ .profile{
+  display: flex;
+ }
+ .profileRight{
+
+  flex: 9;
+ }
+ .profileRightBottom{
+  display: flex;
+ }
+ .profileCover{
+ height: 320px;
+ position: relative; 
+ }
+ .profileCoverImg{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+ }
+ .profileUserImg{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 150px;
+  border: 3px solid white;
+ }
+ .profileInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .profileInfoName{
+  font-size: 24px;
+ }
+ .profileInfoDescription{
+  font-weight: 300;
+ }
+ .rightbarTitle{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+ }
+ .rightbarFollowingImg{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 2px;
+ }
+ .rightbarInfo{
+  margin-bottom: 30px;
+ }
+ .rightbarInfoItem{
+  margin-bottom: 10px;
+ }
+ .rightbarInfoKey{
+  font-weight: 500;
+  margin-right: 15px;
+  color: #555;
+ }
+ .rightbarInfoValue{
+  font-weight: 300;
+ }
+ .rightbarFollowings{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+ .rightbarFollowing{
+  display: flex;
+  flex-direction: column;
+ }
+
+
+
+ .login{
+  width: 100vw;
+  height: 100vh; 
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .loginWrapper{
+  width: 70%;
+  height: 70%;
+  display: flex;
+
+ }
+.loginLeft,.loginRight{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loginLogo{
+  font-size: 50px;
+  font-weight: 800;
+  color: crimson;
+  margin-bottom: 10px;
+}
+.loginDesc{
+  font-size: 24px;
+}
+.loginbox{
+  height: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.loginInput{
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  padding-left: 20px;
+}
+.loginInput:focus{
+  outline: none;
+}
+.loginButton{
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: crimson;
+  color: white;
+font-size: 20px;
+font-weight: 500;
+cursor: pointer;
+}
+.loginForgot{
+  text-align: center;
+  color: rgb(165, 68, 88);
+}
+.loginRegisterButton{
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: crimson;
+  color: white;
+font-size: 20px;
+font-weight: 500;
+cursor: pointer;
+width: 60%;
+align-self: center;
 }
